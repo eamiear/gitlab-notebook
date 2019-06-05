@@ -37,7 +37,12 @@ Runner 分为全局共享Runner及仓库Runner。
 
 ![](snapshot/shared-token.png)
 
-2. [注册流程](#register)
+2. [注册流程](#注册流程)
+
+
+3. 注册完成后，`admin/runners`页面看到runner记录
+
+![](snapshot/shared-runner.png)
 
 
 #### 注册流程
