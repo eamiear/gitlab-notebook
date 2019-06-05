@@ -31,5 +31,98 @@ Runner 分为全局共享Runner及仓库Runner。
 
 #### 注册共享Runner
 
+管理员账号才能注册共享Runner，且仅能注册一个。
+
+1. 在 `admin/runners`页上获取共享Runner token
+
+![](snapshot/shared-token.png)
+
+2. [注册流程](#register)
 
 
+#### 注册流程
+
+1. 执行下面命令：
+
+```bash
+[root@kz gitlab]# gitlab-runner register
+
+```
+
+2. 输入GitLab实例URL（`admin/runner`页中的链接）：
+
+```bash
+[root@kz gitlab]# gitlab-runner register
+Runtime platform                                    arch=amd64 os=linux pid=14694 revision=ac2a293c version=11.11.2
+Running in system-mode.                            
+                                                   
+Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):
+http://47.110.228.131/
+
+```
+
+3. 输入token（`admin/runners`页上获取）:
+
+```bash
+Please enter the gitlab-ci token for this runner:
+D3s24_Nsx4HoABtA19yfSBkd
+
+```
+
+4. 输入Runner描述，后续可在页面上修改
+   
+```bash
+Please enter the gitlab-ci description for this runner:
+[iZbp19xg5vv2b5wnt0avavZ]: shared-runner
+
+```
+
+5. 输入Runner标签，后续可在GitLab平台修改
+
+```bash
+Please enter the gitlab-ci tags for this runner (comma separated):
+shared
+Registering runner... succeeded                     runner=D_Nsx4Ho
+
+```
+
+6. 选择执行器
+
+不确定选择哪个就选择 shell
+
+```bash
+Please enter the executor: docker, virtualbox, docker+machine, docker-ssh+machine, docker-ssh, parallels, shell, ssh, kubernetes:
+shell
+```
+
+全部脚本：
+
+```bash
+
+[root@kz gitlab]# gitlab-runner register
+Runtime platform                                    arch=amd64 os=linux pid=15281 revision=ac2a293c version=11.11.2
+Running in system-mode.                            
+                                                   
+Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):
+http://47.110.228.131/
+Please enter the gitlab-ci token for this runner:
+D3s24_Nsx4HoABtA19yfSBkd
+Please enter the gitlab-ci description for this runner:
+[iZbp19xg5vv2b5wnt0avavZ]: ob-shared-runner
+Please enter the gitlab-ci tags for this runner (comma separated):
+shared
+Registering runner... succeeded                     runner=D_Nsx4Ho
+Please enter the executor: docker, virtualbox, docker+machine, docker-ssh+machine, docker-ssh, parallels, shell, ssh, kubernetes:
+shell
+Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
+
+```
+
+
+### 参考
+
+[`Installing the Runner`](https://docs.gitlab.com/runner/install/linux-repository.html)
+
+[`Registering Runners`](https://docs.gitlab.com/runner/register/index.html)
+
+[`Registering a shared Runner`](https://docs.gitlab.com/ee/ci/runners/#registering-a-shared-runner)
