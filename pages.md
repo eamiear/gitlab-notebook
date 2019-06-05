@@ -27,7 +27,13 @@ curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/sc
 
 ### 注册Runner
 
-Runner 分为全局共享Runner及仓库Runner。
+Runner 有五种类型：
+
+* shared - 执行所有未分配项目的作业
+* group -  执行所在组所有未分配项目的作业
+* specific - 执行已分配项目的作业
+* locked - Runner不能分配给其他项目
+* paused - Runner不能接收任何新作业
 
 #### 注册共享Runner
 
@@ -35,15 +41,16 @@ Runner 分为全局共享Runner及仓库Runner。
 
 1. 在 `admin/runners`页上获取共享Runner token
 
-![](snapshot/shared-token.png)
+![shared-token](snapshot/shared-token.png)
 
 2. [注册流程](#注册流程)
 
 
 3. 注册完成后，`admin/runners`页面看到runner记录
 
-![](snapshot/shared-runner.png)
+![shared-runner](snapshot/shared-runner.png)
 
+4. 添加子域名
 
 #### 注册流程
 
@@ -131,3 +138,5 @@ Runner registered successfully. Feel free to start it, but if it's running alrea
 [`Registering Runners`](https://docs.gitlab.com/runner/register/index.html)
 
 [`Registering a shared Runner`](https://docs.gitlab.com/ee/ci/runners/#registering-a-shared-runner)
+
+[`GitLab Pages`](https://docs.gitlab.com/ee/administration/pages/index.html)
