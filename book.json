@@ -12,7 +12,5 @@
     "plugins": [ 
         "-search",
         "search-pro"
-    ],
-    "pluginsConfig": {
-    }
+    ]
 }
