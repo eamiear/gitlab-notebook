@@ -2,7 +2,7 @@
 
 ### 安装 Runner
 
-1. 添加 GitLab 官方仓库：
+##### 添加 GitLab 官方仓库：
 
 ```shell
 # For RHEL/CentOS/Fedora
@@ -10,14 +10,14 @@
 curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh | sudo bash
 ```
 
-2. 安装最新版本的GitLab Runner，或跳到下一步骤安装指定版本
+##### 安装最新版本的GitLab Runner，或跳到下一步骤安装指定版本
 
 ```shell
  # For RHEL/CentOS/Fedora
  sudo yum install gitlab-runner
 ```
 
-3. 安装特定版本的GitLab Runner
+##### 安装特定版本的GitLab Runner
 
 ```shell
  # for RPM based systems
@@ -39,18 +39,18 @@ Runner 有五种类型：
 
 管理员账号才能注册共享Runner，且仅能注册一个。
 
-1. 在 `admin/runners`页上获取共享Runner token
+##### 在 `admin/runners`页上获取共享Runner token
 
 ![shared-token](snapshot/shared-token.png)
 
-2. [注册流程](#注册流程)
+##### [注册流程](#注册流程)
 
 
-3. 注册完成后，`admin/runners`页面看到runner记录
+##### 注册完成后，`admin/runners`页面看到runner记录
 
 ![shared-runner](snapshot/shared-runner.png)
 
-4. 添加子域名(泛域名解析)
+##### 添加子域名(泛域名解析)
 
 在服务器上添加域名解析，如阿里云等
 ```
@@ -59,7 +59,7 @@ Runner 有五种类型：
 
 配置好后，用户可通过`username.page.xxx.com`访问pages
 
-5. 修改gitlab配置文件
+##### 修改gitlab配置文件
    
 ```
 vi /etc/gitlab/gitlab.rb
@@ -80,21 +80,21 @@ gitlab-ctl restart
 
 ![gitlab-page](snapshot/gitlab-pages.png)
 
-6. 编写 .gitlab-ci.yml 文件
+##### 编写 .gitlab-ci.yml 文件
 
 项目需要使用Pages功能时，在根目录下添加并填写 .gitlab-ci.yml 文件。
 
 
 #### 注册流程
 
-1. 执行下面命令：
+##### 执行下面命令：
 
 ```bash
 [root@kz gitlab]# gitlab-runner register
 
 ```
 
-2. 输入GitLab实例URL（`admin/runner`页中的链接）：
+##### 输入GitLab实例URL（`admin/runner`页中的链接）：
 
 ```bash
 [root@kz gitlab]# gitlab-runner register
@@ -106,7 +106,7 @@ http://47.110.228.131/
 
 ```
 
-3. 输入token（`admin/runners`页上获取）:
+##### 输入token（`admin/runners`页上获取）:
 
 ```bash
 Please enter the gitlab-ci token for this runner:
@@ -114,7 +114,7 @@ D3s24_Nsx4HoABtA19yfSBkd
 
 ```
 
-4. 输入Runner描述，后续可在页面上修改
+##### 输入Runner描述，后续可在页面上修改
    
 ```bash
 Please enter the gitlab-ci description for this runner:
@@ -122,7 +122,7 @@ Please enter the gitlab-ci description for this runner:
 
 ```
 
-5. 输入Runner标签，后续可在GitLab平台修改
+##### 输入Runner标签，后续可在GitLab平台修改
 
 ```bash
 Please enter the gitlab-ci tags for this runner (comma separated):
@@ -131,7 +131,7 @@ Registering runner... succeeded                     runner=D_Nsx4Ho
 
 ```
 
-6. 选择执行器
+##### 选择执行器
 
 不确定选择哪个就选择 shell
 
