@@ -1,8 +1,8 @@
 # Gitlab pages
 
-## 配置
+### 配置
 
-### 添加子域名(泛域名解析)
+#### 添加子域名(泛域名解析)
 
 在服务器上添加域名解析，如阿里云等
 ```
@@ -11,7 +11,7 @@
 
 配置好后，用户可通过`username.page.xxx.com`访问pages
 
-### 修改gitlab配置文件
+#### 修改gitlab配置文件
    
 ```
 vi /etc/gitlab/gitlab.rb
@@ -32,11 +32,11 @@ gitlab-ctl restart
 
 ![gitlab-page](snapshot/gitlab-pages.png)
 
-### 编写 .gitlab-ci.yml 文件
+#### 编写 .gitlab-ci.yml 文件
 
 项目需要使用Pages功能时，在根目录下添加并填写 .gitlab-ci.yml 文件。
 
 
-## 参考
+### 参考
 
 [`GitLab Pages`](https://docs.gitlab.com/ee/administration/pages/index.html)
