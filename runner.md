@@ -43,7 +43,7 @@ Runner 有五种类型：
 
 ![shared-token](snapshot/shared-token.png)
 
-##### [注册流程](#注册流程)
+##### [注册操作](#注册流程)
 
 
 ##### 注册完成后，`admin/runners`页面看到runner记录
