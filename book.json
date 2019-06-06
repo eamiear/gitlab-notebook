@@ -1,0 +1,18 @@
+{
+    "title": "GitLab NoteBook",
+    "description": "GitLab 使用记录册",
+    "author": "eamiear",
+    "output.name": "GitLab-NoteBook",
+    "language": "zh-hans",
+    "gitbook": "3.2.2",
+    "root": ".",
+    "theme-default": {
+        "showLevel": true
+    },
+    "plugins": [ 
+        "-search",
+        "search-pro"
+    ],
+    "pluginsConfig": {
+    }
+}
