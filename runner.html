@@ -1,0 +1,410 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Runner · GitLab NoteBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="eamiear">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pages.html" />
+    
+    
+    <link rel="prev" href="email.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="localization.html">
+            
+                <a href="localization.html">
+            
+                    
+                    汉化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="use-local-nginx.html">
+            
+                <a href="use-local-nginx.html">
+            
+                    
+                    使用本地Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="email.html">
+            
+                <a href="email.html">
+            
+                    
+                    启用邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="runner.html">
+            
+                <a href="runner.html">
+            
+                    
+                    Runner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="pages.html">
+            
+                <a href="pages.html">
+            
+                    
+                    使用Pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Runner</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="runner">Runner</h1>
+<h3 id="&#x5B89;&#x88C5;-runner">&#x5B89;&#x88C5; Runner</h3>
+<h5 id="&#x6DFB;&#x52A0;-gitlab-&#x5B98;&#x65B9;&#x4ED3;&#x5E93;&#xFF1A;">&#x6DFB;&#x52A0; GitLab &#x5B98;&#x65B9;&#x4ED3;&#x5E93;&#xFF1A;</h5>
+<pre><code class="lang-shell"># For RHEL/CentOS/Fedora
+
+curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh | sudo bash
+</code></pre>
+<h5 id="&#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;gitlab-runner&#xFF0C;&#x6216;&#x8DF3;&#x5230;&#x4E0B;&#x4E00;&#x6B65;&#x9AA4;&#x5B89;&#x88C5;&#x6307;&#x5B9A;&#x7248;&#x672C;">&#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;GitLab Runner&#xFF0C;&#x6216;&#x8DF3;&#x5230;&#x4E0B;&#x4E00;&#x6B65;&#x9AA4;&#x5B89;&#x88C5;&#x6307;&#x5B9A;&#x7248;&#x672C;</h5>
+<pre><code class="lang-shell"> # For RHEL/CentOS/Fedora
+ sudo yum install gitlab-runner
+</code></pre>
+<h5 id="&#x5B89;&#x88C5;&#x7279;&#x5B9A;&#x7248;&#x672C;&#x7684;gitlab-runner">&#x5B89;&#x88C5;&#x7279;&#x5B9A;&#x7248;&#x672C;&#x7684;GitLab Runner</h5>
+<pre><code class="lang-shell"> # for RPM based systems
+ yum list gitlab-runner --showduplicates | sort -r
+ sudo yum install gitlab-runner-10.0.0-1
+</code></pre>
+<h3 id="&#x6CE8;&#x518C;runner">&#x6CE8;&#x518C;Runner</h3>
+<p>Runner &#x6709;&#x4E94;&#x79CD;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ul>
+<li>shared - &#x6267;&#x884C;&#x6240;&#x6709;&#x672A;&#x5206;&#x914D;&#x9879;&#x76EE;&#x7684;&#x4F5C;&#x4E1A;</li>
+<li>group -  &#x6267;&#x884C;&#x6240;&#x5728;&#x7EC4;&#x6240;&#x6709;&#x672A;&#x5206;&#x914D;&#x9879;&#x76EE;&#x7684;&#x4F5C;&#x4E1A;</li>
+<li>specific - &#x6267;&#x884C;&#x5DF2;&#x5206;&#x914D;&#x9879;&#x76EE;&#x7684;&#x4F5C;&#x4E1A;</li>
+<li>locked - Runner&#x4E0D;&#x80FD;&#x5206;&#x914D;&#x7ED9;&#x5176;&#x4ED6;&#x9879;&#x76EE;</li>
+<li>paused - Runner&#x4E0D;&#x80FD;&#x63A5;&#x6536;&#x4EFB;&#x4F55;&#x65B0;&#x4F5C;&#x4E1A;</li>
+</ul>
+<h4 id="&#x6CE8;&#x518C;&#x5171;&#x4EAB;runner">&#x6CE8;&#x518C;&#x5171;&#x4EAB;Runner</h4>
+<p>&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x53F7;&#x624D;&#x80FD;&#x6CE8;&#x518C;&#x5171;&#x4EAB;Runner&#xFF0C;&#x4E14;&#x4EC5;&#x80FD;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x3002;</p>
+<h5 id="&#x5728;-adminrunners&#x9875;&#x4E0A;&#x83B7;&#x53D6;&#x5171;&#x4EAB;runner-token">&#x5728; <code>admin/runners</code>&#x9875;&#x4E0A;&#x83B7;&#x53D6;&#x5171;&#x4EAB;Runner token</h5>
+<p><img src="snapshot/shared-token.png" alt="shared-token"></p>
+<h5 id="&#x6CE8;&#x518C;&#x64CD;&#x4F5C;"><a href="#&#x6CE8;&#x518C;&#x6D41;&#x7A0B;">&#x6CE8;&#x518C;&#x64CD;&#x4F5C;</a></h5>
+<h5 id="&#x6CE8;&#x518C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;adminrunners&#x9875;&#x9762;&#x770B;&#x5230;runner&#x8BB0;&#x5F55;">&#x6CE8;&#x518C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;<code>admin/runners</code>&#x9875;&#x9762;&#x770B;&#x5230;runner&#x8BB0;&#x5F55;</h5>
+<p><img src="snapshot/shared-runner.png" alt="shared-runner"></p>
+<h5 id="&#x6DFB;&#x52A0;&#x5B50;&#x57DF;&#x540D;&#x6CDB;&#x57DF;&#x540D;&#x89E3;&#x6790;">&#x6DFB;&#x52A0;&#x5B50;&#x57DF;&#x540D;(&#x6CDB;&#x57DF;&#x540D;&#x89E3;&#x6790;)</h5>
+<p>&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6DFB;&#x52A0;&#x57DF;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x5982;&#x963F;&#x91CC;&#x4E91;&#x7B49;</p>
+<pre><code>*.page.xxx.com 192.168.22.23
+</code></pre><p>&#x914D;&#x7F6E;&#x597D;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x901A;&#x8FC7;<code>username.page.xxx.com</code>&#x8BBF;&#x95EE;pages</p>
+<h5 id="&#x4FEE;&#x6539;gitlab&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x4FEE;&#x6539;gitlab&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h5>
+<pre><code>vi /etc/gitlab/gitlab.rb
+
+pages_external_url &quot;http://page.xxx.com&quot;
+gitlab_pages[&apos;enable&apos;] = true
+</code></pre><p>&#x6267;&#x884C;gitlab&#x91CD;&#x914D;&#x7F6E;&#x3001;&#x91CD;&#x542F;&#x547D;&#x4EE4;:</p>
+<pre><code>gitlab-ctl reconfigure
+
+gitlab-ctl restart
+</code></pre><p>&#x914D;&#x7F6E;&#x6210;&#x529F;&#xFF0C;&#x5219;admin&#x9875;&#x9762;&#x4E0A;&#x7684; GitLab Pages&#x9879;&#x5904;&#x4E8E;&#x542F;&#x7528;&#x72B6;&#x6001;</p>
+<p><img src="snapshot/gitlab-pages.png" alt="gitlab-page"></p>
+<h5 id="&#x7F16;&#x5199;-gitlab-ciyml-&#x6587;&#x4EF6;">&#x7F16;&#x5199; .gitlab-ci.yml &#x6587;&#x4EF6;</h5>
+<p>&#x9879;&#x76EE;&#x9700;&#x8981;&#x4F7F;&#x7528;Pages&#x529F;&#x80FD;&#x65F6;&#xFF0C;&#x5728;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x6DFB;&#x52A0;&#x5E76;&#x586B;&#x5199; .gitlab-ci.yml &#x6587;&#x4EF6;&#x3002;</p>
+<h4 id="&#x6CE8;&#x518C;&#x6D41;&#x7A0B;">&#x6CE8;&#x518C;&#x6D41;&#x7A0B;</h4>
+<h5 id="&#x6267;&#x884C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#xFF1A;">&#x6267;&#x884C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#xFF1A;</h5>
+<pre><code class="lang-bash">[root@kz gitlab]<span class="hljs-comment"># gitlab-runner register</span>
+</code></pre>
+<h5 id="&#x8F93;&#x5165;gitlab&#x5B9E;&#x4F8B;url&#xFF08;adminrunner&#x9875;&#x4E2D;&#x7684;&#x94FE;&#x63A5;&#xFF09;&#xFF1A;">&#x8F93;&#x5165;GitLab&#x5B9E;&#x4F8B;URL&#xFF08;<code>admin/runner</code>&#x9875;&#x4E2D;&#x7684;&#x94FE;&#x63A5;&#xFF09;&#xFF1A;</h5>
+<pre><code class="lang-bash">[root@kz gitlab]<span class="hljs-comment"># gitlab-runner register</span>
+Runtime platform                                    arch=amd64 os=linux pid=14694 revision=ac2a293c version=11.11.2
+Running <span class="hljs-keyword">in</span> system-mode.                            
+
+Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):
+http://47.110.228.131/
+</code></pre>
+<h5 id="&#x8F93;&#x5165;token&#xFF08;adminrunners&#x9875;&#x4E0A;&#x83B7;&#x53D6;&#xFF09;">&#x8F93;&#x5165;token&#xFF08;<code>admin/runners</code>&#x9875;&#x4E0A;&#x83B7;&#x53D6;&#xFF09;:</h5>
+<pre><code class="lang-bash">Please enter the gitlab-ci token <span class="hljs-keyword">for</span> this runner:
+D3s24_Nsx4HoABtA19yfSBkd
+</code></pre>
+<h5 id="&#x8F93;&#x5165;runner&#x63CF;&#x8FF0;&#xFF0C;&#x540E;&#x7EED;&#x53EF;&#x5728;&#x9875;&#x9762;&#x4E0A;&#x4FEE;&#x6539;">&#x8F93;&#x5165;Runner&#x63CF;&#x8FF0;&#xFF0C;&#x540E;&#x7EED;&#x53EF;&#x5728;&#x9875;&#x9762;&#x4E0A;&#x4FEE;&#x6539;</h5>
+<pre><code class="lang-bash">Please enter the gitlab-ci description <span class="hljs-keyword">for</span> this runner:
+[iZbp19xg5vv2b5wnt0avavZ]: shared-runner
+</code></pre>
+<h5 id="&#x8F93;&#x5165;runner&#x6807;&#x7B7E;&#xFF0C;&#x540E;&#x7EED;&#x53EF;&#x5728;gitlab&#x5E73;&#x53F0;&#x4FEE;&#x6539;">&#x8F93;&#x5165;Runner&#x6807;&#x7B7E;&#xFF0C;&#x540E;&#x7EED;&#x53EF;&#x5728;GitLab&#x5E73;&#x53F0;&#x4FEE;&#x6539;</h5>
+<pre><code class="lang-bash">Please enter the gitlab-ci tags <span class="hljs-keyword">for</span> this runner (comma separated):
+shared
+Registering runner... succeeded                     runner=D_Nsx4Ho
+</code></pre>
+<h5 id="&#x9009;&#x62E9;&#x6267;&#x884C;&#x5668;">&#x9009;&#x62E9;&#x6267;&#x884C;&#x5668;</h5>
+<p>&#x4E0D;&#x786E;&#x5B9A;&#x9009;&#x62E9;&#x54EA;&#x4E2A;&#x5C31;&#x9009;&#x62E9; shell</p>
+<pre><code class="lang-bash">Please enter the executor: docker, virtualbox, docker+machine, docker-ssh+machine, docker-ssh, parallels, shell, ssh, kubernetes:
+shell
+</code></pre>
+<p>&#x5168;&#x90E8;&#x811A;&#x672C;&#xFF1A;</p>
+<pre><code class="lang-bash">
+[root@kz gitlab]<span class="hljs-comment"># gitlab-runner register</span>
+Runtime platform                                    arch=amd64 os=linux pid=15281 revision=ac2a293c version=11.11.2
+Running <span class="hljs-keyword">in</span> system-mode.                            
+
+Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):
+http://47.110.228.131/
+Please enter the gitlab-ci token <span class="hljs-keyword">for</span> this runner:
+D3s24_Nsx4HoABtA19yfSBkd
+Please enter the gitlab-ci description <span class="hljs-keyword">for</span> this runner:
+[iZbp19xg5vv2b5wnt0avavZ]: ob-shared-runner
+Please enter the gitlab-ci tags <span class="hljs-keyword">for</span> this runner (comma separated):
+shared
+Registering runner... succeeded                     runner=D_Nsx4Ho
+Please enter the executor: docker, virtualbox, docker+machine, docker-ssh+machine, docker-ssh, parallels, shell, ssh, kubernetes:
+shell
+Runner registered successfully. Feel free to start it, but <span class="hljs-keyword">if</span> it<span class="hljs-string">&apos;s running already the config should be automatically reloaded!
+</span></code></pre>
+<h3 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h3>
+<p><a href="https://docs.gitlab.com/runner/install/linux-repository.html" target="_blank"><code>Installing the Runner</code></a></p>
+<p><a href="https://docs.gitlab.com/runner/register/index.html" target="_blank"><code>Registering Runners</code></a></p>
+<p><a href="https://docs.gitlab.com/ee/ci/runners/#registering-a-shared-runner" target="_blank"><code>Registering a shared Runner</code></a></p>
+<p><a href="https://docs.gitlab.com/ee/administration/pages/index.html" target="_blank"><code>GitLab Pages</code></a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="email.html" class="navigation navigation-prev " aria-label="Previous page: 启用邮件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pages.html" class="navigation navigation-next " aria-label="Next page: 使用Pages">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Runner","level":"1.6","depth":1,"next":{"title":"使用Pages","level":"1.7","depth":1,"path":"pages.md","ref":"pages.md","articles":[]},"previous":{"title":"启用邮件","level":"1.5","depth":1,"path":"email.md","ref":"email.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"eamiear","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitLab NoteBook","language":"zh-hans","output.name":"GitLab-NoteBook","gitbook":"3.2.2","description":"GitLab 使用记录册","theme-default":{"showLevel":true}},"file":{"path":"runner.md","mtime":"2019-06-06T05:26:52.989Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-06-06T05:27:42.989Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
