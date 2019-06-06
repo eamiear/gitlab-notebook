@@ -107,13 +107,13 @@ gitlab-ctl tail
 
 ### 附件
 
-#### nginx配置
+##### nginx配置
 
-[nginx.conf](config/nginx.conf)
+[`nginx.conf`](./config/nginx.conf)
 
-#### gitlab配置
+##### gitlab配置
 
-[gitlab.rb](config/gitlab.rb)
+[`gitlab.rb`](./config/gitlab.rb)
 
 ### 参考
 
